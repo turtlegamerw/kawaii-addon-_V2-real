@@ -1,4 +1,4 @@
-9# Kawaii Addon v2 Real
+# Kawaii Addon v2 Real
 
 **Repository:** [kawaii-addon-_V2-real](https://github.com/turtlegamerw/kawaii-addon-_V2-real)
 
