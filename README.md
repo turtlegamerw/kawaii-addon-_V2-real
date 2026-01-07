@@ -28,14 +28,8 @@ A **Meteor Client addon** for Minecraft 1.21.8 that displays **catgirl images** 
 
 ## Usage 🎮
 
-- WIP
+# figure it out
 ---
-
-## Development 🛠️
-
-To build the addon locally:
-
-
 
 
 ## Development 🛠️
@@ -46,12 +40,11 @@ To build the addon locally:
 git clone https://github.com/turtlegamerw/kawaii-addon-_V2-real.git
 cd kawaii-addon-_V2-real
 ./gradlew build
+```
 
 ---
 
+## Credits
 
-Credits
-
-Meteor Client devs
-
-Fabric devs
+- **Meteor Client devs**
+- **Fabric devs**
