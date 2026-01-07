@@ -19,9 +19,19 @@ public class HudCat extends HudElement {
 
     private final SettingGroup sg = settings.getDefaultGroup();
 
-    private final Setting<Integer> size = sg.add(new IntSetting.Builder()
-        .name("size")
-        .description("How many cats to show.")
+    private final Setting<Integer> width = sg.add(new IntSetting.Builder()
+        .name("width")
+        .description("Stretch the cat in the x axis.")
+        .defaultValue(5)
+        .min(1)
+        .sliderMin(1)
+        .sliderMax(20)
+        .build()
+    );
+
+    private final Setting<Integer> height = sg.add(new IntSetting.Builder()
+        .name("height")
+        .description("Stretch the cat in the y axis.")
         .defaultValue(5)
         .min(1)
         .sliderMin(1)
@@ -31,8 +41,9 @@ public class HudCat extends HudElement {
 
     @Override
     public void render(HudRenderer renderer) {
-        int n = size.get();
-        setSize(64 * n, 64 * n);
+        int x_width = width.get();
+        int y_height = height.get();
+        setSize(64 * x_width, 64 * y_height);
         renderer.texture(TEXTURE, x, y, getWidth(), getHeight(), Color.WHITE);
     }
 }
