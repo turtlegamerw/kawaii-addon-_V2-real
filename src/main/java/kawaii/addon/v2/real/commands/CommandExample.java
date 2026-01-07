@@ -1,4 +1,4 @@
-package com.example.addon.commands;
+package kawaii.addon.v2.real.commands;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;

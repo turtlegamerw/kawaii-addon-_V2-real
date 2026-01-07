@@ -1,8 +1,9 @@
-package com.example.addon;
+package kawaii.addon.v2.real;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import kawaii.addon.v2.real.commands.CommandExample;
+import kawaii.addon.v2.real.hud.HudCat;
+import kawaii.addon.v2.real.hud.HudExample;
+import kawaii.addon.v2.real.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -30,6 +31,7 @@ public class AddonTemplate extends MeteorAddon {
 
         // HUD
         Hud.get().register(HudExample.INFO);
+        Hud.get().register(HudCat.INFO);
     }
 
     @Override
@@ -39,7 +41,7 @@ public class AddonTemplate extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "kawaii.addon.v2.real";
     }
 
     @Override

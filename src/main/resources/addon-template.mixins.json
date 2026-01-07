@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.example.addon.mixin",
+  "package": "kawaii.addon.v2.real.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
     "ExampleMixin"

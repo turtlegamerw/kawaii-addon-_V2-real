@@ -1,6 +1,6 @@
-package com.example.addon.hud;
+package kawaii.addon.v2.real.hud;
 
-import com.example.addon.AddonTemplate;
+import kawaii.addon.v2.real.AddonTemplate;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;

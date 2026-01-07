@@ -1,6 +1,6 @@
-package com.example.addon.modules;
+package kawaii.addon.v2.real.modules;
 
-import com.example.addon.AddonTemplate;
+import kawaii.addon.v2.real.AddonTemplate;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.ColorSetting;

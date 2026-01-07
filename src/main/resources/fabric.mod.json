@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "kawaii-addon",
   "version": "${version}",
-  "name": "Addon Template",
+  "name": "kawaii-addon-_V2-real",
   "description": "An addon template for Meteor Client addons.",
   "authors": [
-    "seasnail"
+    "john220099",
+    "Turtlegamer_"
   ],
   "contact": {
-    "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "sources": "https://github.com/John220099/kawaii-addon-_V2-real"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "kawaii.addon.v2.real.AddonTemplate"
     ]
   },
   "mixins": [
