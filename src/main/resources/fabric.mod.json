@@ -15,7 +15,7 @@
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "kawaii.addon.v2.real.AddonTemplate"
+      "kawaii.addon.v2.real.KawaiiAddon"
     ]
   },
   "mixins": [

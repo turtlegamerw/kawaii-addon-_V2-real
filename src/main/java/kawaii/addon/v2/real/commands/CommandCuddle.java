@@ -5,9 +5,9 @@ import meteordevelopment.meteorclient.commands.Command;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.command.CommandSource;
 
-public class CommandCoord extends Command {
-    public CommandCoord() {
-        super("coordleaker", "Sends ur coords in public chat :D");
+public class CommandCuddle extends Command {
+    public CommandCuddle() {
+        super("cuddler", "Sends ur coords in public chat :D");
     }
 
     @Override
@@ -19,10 +19,10 @@ public class CommandCoord extends Command {
                 int x = client.player.getBlockX();
                 int y = client.player.getBlockY();
                 int z = client.player.getBlockZ();
-                String message = String.format("Hi nerds my coords are: X: %d, Y: %d, Z: %d", x, y, z);
+                String message = String.format("Cuddle with me at coords owo: X: %d, Y: %d, Z: %d", x, y, z);
                 client.player.networkHandler.sendChatMessage(message);
             } else {
-                error("lol.");
+                error("skill issue thb.");
             }
 
             return SINGLE_SUCCESS;

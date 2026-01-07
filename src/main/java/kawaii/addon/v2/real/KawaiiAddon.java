@@ -2,7 +2,6 @@ package kawaii.addon.v2.real;
 
 import kawaii.addon.v2.real.commands.*;
 import kawaii.addon.v2.real.hud.*;
-import kawaii.addon.v2.real.modules.*;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -13,7 +12,7 @@ import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
 
-public class AddonTemplate extends MeteorAddon {
+public class KawaiiAddon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
@@ -23,14 +22,11 @@ public class AddonTemplate extends MeteorAddon {
         LOG.info("Initializing Meteor Addon Template");
 
         // Modules
-        Modules.get().add(new ModuleExample());
 
         // Commands
-        Commands.add(new CommandExample());
-        Commands.add(new CommandCoord());
+        Commands.add(new CommandCuddle());
 
         // HUD
-        Hud.get().register(HudExample.INFO);
         Hud.get().register(HudCat.INFO);
     }
 
