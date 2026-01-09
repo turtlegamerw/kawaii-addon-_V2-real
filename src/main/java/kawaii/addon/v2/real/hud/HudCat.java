@@ -20,7 +20,7 @@ public class HudCat extends HudElement {
 
     private final SettingGroup sg = settings.getDefaultGroup();
 
-    // Width slider
+
     private final Setting<Integer> width = sg.add(new IntSetting.Builder()
         .name("width")
         .description("Stretch the cat in the x axis.")
@@ -31,7 +31,7 @@ public class HudCat extends HudElement {
         .build()
     );
 
-    // Height slider
+
     private final Setting<Integer> height = sg.add(new IntSetting.Builder()
         .name("height")
         .description("Stretch the cat in the y axis.")
@@ -42,7 +42,7 @@ public class HudCat extends HudElement {
         .build()
     );
 
-    // Picture selector 1-5
+
     private final Setting<Integer> picture = sg.add(new IntSetting.Builder()
         .name("picture")
         .description("Select different pictures of catgirls.")
@@ -56,7 +56,7 @@ public class HudCat extends HudElement {
     // Array to hold preloaded textures
     private static final Identifier[] TEXTURES = new Identifier[5];
 
-    // Preload all textures using a loop
+    // Preload all textures using a loop idk to expand i dont remember writing this O:
     private static void preloadTextures() {
         for (int i = 0; i < TEXTURES.length; i++) {
             // No leading / in path

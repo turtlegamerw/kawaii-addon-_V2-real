@@ -3,7 +3,7 @@
   "id": "kawaii-addon",
   "version": "${version}",
   "name": "kawaii-addon-_V2-real",
-  "description": "An addon template for Meteor Client addons.",
+  "description": "A Meteor Client addon for Minecraft 1.21.8 that displays catgirl images + more, adding some kawaii flair to your client!.",
   "authors": [
     "john220099",
     "Turtlegamer_"
@@ -11,7 +11,7 @@
   "contact": {
     "sources": "https://github.com/turtlegamerw/kawaii-addon-_V2-real"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/kawaii-addon/icon/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
@@ -19,7 +19,7 @@
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "KawaiiAddon.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"
