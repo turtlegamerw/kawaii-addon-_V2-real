@@ -1,4 +1,4 @@
-plugins {
+    plugins {
     id("fabric-loom") version "1.11-SNAPSHOT"
 }
 
@@ -9,6 +9,7 @@ base {
 }
 
 repositories {
+    mavenCentral()
     maven {
         name = "meteor-maven"
         url = uri("https://maven.meteordev.org/releases")
@@ -17,7 +18,6 @@ repositories {
         name = "meteor-maven-snapshots"
         url = uri("https://maven.meteordev.org/snapshots")
     }
-    mavenCentral()
 }
 
 dependencies {
