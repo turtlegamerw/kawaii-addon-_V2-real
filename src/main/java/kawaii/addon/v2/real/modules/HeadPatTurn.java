@@ -22,7 +22,7 @@ public class HeadPatTurn extends Module {
         .description("Spin speed.")
         .defaultValue(10)
         .min(1)
-        .sliderMax(1000)
+        .sliderMax(100)
         .build()
     );
 
