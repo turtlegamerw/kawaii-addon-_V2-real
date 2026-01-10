@@ -1,6 +1,7 @@
 package kawaii.addon.v2.real.hud;
 
 import kawaii.addon.v2.real.KawaiiAddon;
+import meteordevelopment.meteorclient.settings.EnumSetting;
 import meteordevelopment.meteorclient.settings.IntSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
@@ -15,11 +16,9 @@ public class HudCat extends HudElement {
 
     public HudCat() {
         super(INFO);
-        preloadTextures();
     }
 
     private final SettingGroup sg = settings.getDefaultGroup();
-
 
     private final Setting<Integer> width = sg.add(new IntSetting.Builder()
         .name("width")
@@ -42,38 +41,31 @@ public class HudCat extends HudElement {
         .build()
     );
 
-
-    private final Setting<Integer> picture = sg.add(new IntSetting.Builder()
+    private final Setting<Picture> mode = sg.add(new EnumSetting.Builder<HudCat.Picture>()
         .name("picture")
-        .description("Select different pictures of catgirls.")
-        .defaultValue(1)
-        .min(1)
-        .sliderMin(1)
-        .sliderMax(5)
+        .description("set the picture you want.")
+        .defaultValue(Picture.Cat1)
         .build()
     );
 
-    // Array to hold preloaded textures
-    private static final Identifier[] TEXTURES = new Identifier[5];
-
-    // Preload all textures using a loop idk to expand i dont remember writing this O:
-    private static void preloadTextures() {
-        for (int i = 0; i < TEXTURES.length; i++) {
-            // No leading / in path
-            TEXTURES[i] = Identifier.of("kawaii-addon", "hud/cat" + (i + 1) + ".png");
-        }
+    public enum Picture {
+        Cat1, Cat2, Cat3, Cat4, Cat5
     }
+
+    private Identifier TEXTURE;
 
     @Override
     public void render(HudRenderer renderer) {
+            switch (mode.get()) {
+                case Cat1 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat1.png");
+                case Cat2 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat2.png");
+                case Cat3 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat3.png");
+                case Cat4 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat4.png");
+                case Cat5 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat5.png");
+            }
         int x_width = width.get();
         int y_height = height.get();
         setSize(64 * x_width, 64 * y_height);
-
-        // Ensure index is valid (array is 0-indexed)
-        int index = picture.get() - 1;
-        if (index < 0 || index >= TEXTURES.length) index = 0;
-
-        renderer.texture(TEXTURES[index], x, y, getWidth(), getHeight(), Color.WHITE);
+        renderer.texture(TEXTURE, x, y, getWidth(), getHeight(), Color.WHITE);
     }
 }
