@@ -3,6 +3,7 @@
   "package": "kawaii.addon.v2.real.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "AbstractClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
