@@ -22,6 +22,9 @@ public class ModuleCape extends Module {
     private final SettingGroup sgCapes = settings.getDefaultGroup();
 
     public enum Cape{
-        cape1
+        cape1,
+        cape2,
+        cape3,
+        cape4
     }
 }
