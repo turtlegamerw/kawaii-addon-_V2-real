@@ -26,6 +26,8 @@ public class Cape extends Module {
         cape1,
         cape2,
         cape3,
-        cape4
+        cape4,
+        hutao,
+        vape
     }
 }

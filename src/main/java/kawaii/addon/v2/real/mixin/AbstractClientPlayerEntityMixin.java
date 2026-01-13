@@ -34,6 +34,8 @@ public abstract class AbstractClientPlayerEntityMixin extends Entity {
             case cape2 -> Identifier.of("kawaii-addon", "cape/cape2.png");
             case cape3 -> Identifier.of("kawaii-addon", "cape/cape3.png");
             case cape4 -> Identifier.of("kawaii-addon", "cape/cape4.png");
+            case hutao -> Identifier.of("kawaii-addon", "cape/hutao.png");
+            case vape -> Identifier.of("kawaii-addon", "cape/vape.png");
             default -> original.capeTexture();
         };
         SkinTextures modified = new SkinTextures(
