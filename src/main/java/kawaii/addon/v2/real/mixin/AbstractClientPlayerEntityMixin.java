@@ -29,7 +29,7 @@ public abstract class AbstractClientPlayerEntityMixin extends Entity {
         if (!this.getUuid().equals(mc.getSession().getUuidOrNull())) return;
         SkinTextures original = cir.getReturnValue();
         if (original == null) return;
-        Identifier cape = switch (module.cape.get()) {
+        Identifier cape = switch (module.capes.get()) {
             case cape1 -> Identifier.of("kawaii-addon", "cape/cape1.png");
             case cape2 -> Identifier.of("kawaii-addon", "cape/cape2.png");
             case cape3 -> Identifier.of("kawaii-addon", "cape/cape3.png");

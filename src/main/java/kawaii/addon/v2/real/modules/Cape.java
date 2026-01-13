@@ -5,13 +5,14 @@ import meteordevelopment.meteorclient.settings.EnumSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Module;
+import meteordevelopment.meteorclient.utils.network.Capes;
 
 public class Cape extends Module {
 
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
-    public final Setting<Cape> cape = sgGeneral.add(new EnumSetting.Builder<Cape>()
+    public final Setting<Capes> capes = sgGeneral.add(new EnumSetting.Builder<Capes>()
         .name("Cape")
-        .defaultValue(Cape.cape1)
+        .defaultValue(Capes.cape1)
         .build()
     );
 
@@ -21,7 +22,7 @@ public class Cape extends Module {
 
     private final SettingGroup sgCapes = settings.getDefaultGroup();
 
-    public enum Cape{
+    public enum Capes{
         cape1,
         cape2,
         cape3,
