@@ -1,6 +1,6 @@
 package kawaii.addon.v2.real.mixin;
 
-import kawaii.addon.v2.real.modules.ModuleCape;
+import kawaii.addon.v2.real.modules.Cape;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.util.SkinTextures;
@@ -24,7 +24,7 @@ public abstract class AbstractClientPlayerEntityMixin extends Entity {
 
     @Inject(method = "getSkinTextures", at = @At("RETURN"), cancellable = true)
     private void onGetSkinTextures(CallbackInfoReturnable<SkinTextures> cir) {
-        ModuleCape module = Modules.get().get(ModuleCape.class);
+        Cape module = Modules.get().get(Cape.class);
         if (module == null || !module.isActive()) return;
         if (!this.getUuid().equals(mc.getSession().getUuidOrNull())) return;
         SkinTextures original = cir.getReturnValue();

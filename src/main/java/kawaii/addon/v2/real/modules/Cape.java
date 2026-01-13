@@ -6,7 +6,7 @@ import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Module;
 
-public class ModuleCape extends Module {
+public class Cape extends Module {
 
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
     public final Setting<Cape> cape = sgGeneral.add(new EnumSetting.Builder<Cape>()
@@ -15,7 +15,7 @@ public class ModuleCape extends Module {
         .build()
     );
 
-    public ModuleCape() {
+    public Cape() {
         super(KawaiiAddon.CATEGORY, "Capes", "An example module in a custom category.");
     }
 

@@ -16,7 +16,7 @@ import net.minecraft.util.math.Vec3d;
 import org.joml.Matrix4f;
 import java.lang.reflect.Field;
 
-public class ModuleChinaHat extends Module {
+public class ChinaHat extends Module {
     private final SettingGroup sg = settings.getDefaultGroup();
 
     private final Setting<Double> size = sg.add(new DoubleSetting.Builder()
@@ -72,7 +72,7 @@ public class ModuleChinaHat extends Module {
 
     private static final RenderLayer RENDER_LAYER = RenderLayer.getDebugFilledBox();
 
-    public ModuleChinaHat() {
+    public ChinaHat() {
         super(KawaiiAddon.CATEGORY, "china hat", "Chinese hat.");
     }
 

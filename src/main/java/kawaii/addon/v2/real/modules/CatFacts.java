@@ -9,7 +9,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import static kawaii.addon.v2.real.KawaiiAddon.CATEGORY;
 
-public class ModuleCatFacts extends Module {
+public class CatFacts extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
     private final Setting<Integer> delay = sgGeneral.add(new IntSetting.Builder()
@@ -23,7 +23,7 @@ public class ModuleCatFacts extends Module {
 
     private int timer;
 
-    public ModuleCatFacts() {
+    public CatFacts() {
         super(CATEGORY, "cat facts", "cat fact :3");
     }
 
