@@ -17,17 +17,12 @@ public class Cape extends Module {
     );
 
     public Cape() {
-        super(KawaiiAddon.CATEGORY, "Capes", "An example module in a custom category.");
+        super(KawaiiAddon.CATEGORY, "Capes", "Get a cape (client-side only).");
     }
 
     private final SettingGroup sgCapes = settings.getDefaultGroup();
 
     public enum Capes{
-        cape1,
-        cape2,
-        cape3,
-        cape4,
-        hutao,
-        vape
+        cape1, cape2, cape3, cape4, hutao, vape
     }
 }
