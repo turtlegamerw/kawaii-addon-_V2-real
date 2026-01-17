@@ -23,16 +23,18 @@ public class KawaiiAddon extends MeteorAddon {
         LOG.info("Loading kawaii-addon-_V2-real...");
 
         // Modules
-        //Modules.get().add(new ModuleChinaHat()); unfinished module and broken
-        Modules.get().add(new ModuleCatFacts());
+        //Modules.get().add(new ChinaHat()); unfinished module and broken
+        Modules.get().add(new CatFacts());
         Modules.get().add(new HeadPatTurn());
+        Modules.get().add(new Cape());
+        Modules.get().add(new MapCensor());
 
         // Commands
-        Commands.add(new CommandCuddle());
-        Commands.add(new CommandCrashOut());
+        Commands.add(new Cuddle());
+        Commands.add(new CrashOut());
 
         // HUD
-        Hud.get().register(HudCat.INFO);
+        Hud.get().register(Cat.INFO);
     }
 
     @Override

@@ -52,7 +52,6 @@ public class HeadPatTurn extends Module {
     }
 
     public enum SpinMode {
-        Client,
-        Server
+        Client, Server
     }
 }

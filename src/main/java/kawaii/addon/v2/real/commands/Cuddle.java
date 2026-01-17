@@ -5,8 +5,8 @@ import meteordevelopment.meteorclient.commands.Command;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.command.CommandSource;
 
-public class CommandCuddle extends Command {
-    public CommandCuddle() {
+public class Cuddle extends Command {
+    public Cuddle() {
         super("cuddler", "Sends ur coords in public chat :D");
     }
 

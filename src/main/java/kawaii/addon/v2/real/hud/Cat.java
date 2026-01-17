@@ -11,10 +11,10 @@ import meteordevelopment.meteorclient.systems.hud.HudRenderer;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.util.Identifier;
 
-public class HudCat extends HudElement {
-    public static final HudElementInfo<HudCat> INFO = new HudElementInfo<>(KawaiiAddon.HUD_GROUP, "cat-hud", "Displays a cat icon.", HudCat::new);
+public class Cat extends HudElement {
+    public static final HudElementInfo<Cat> INFO = new HudElementInfo<>(KawaiiAddon.HUD_GROUP, "cat-hud", "Displays a cat icon.", Cat::new);
 
-    public HudCat() {
+    public Cat() {
         super(INFO);
     }
 
@@ -41,7 +41,7 @@ public class HudCat extends HudElement {
         .build()
     );
 
-    private final Setting<Picture> mode = sg.add(new EnumSetting.Builder<HudCat.Picture>()
+    private final Setting<Picture> mode = sg.add(new EnumSetting.Builder<Cat.Picture>()
         .name("picture")
         .description("set the picture you want.")
         .defaultValue(Picture.Cat1)

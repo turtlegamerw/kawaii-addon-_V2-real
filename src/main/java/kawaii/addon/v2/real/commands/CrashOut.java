@@ -5,8 +5,8 @@ import meteordevelopment.meteorclient.commands.Command;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.command.CommandSource;
 
-public class CommandCrashOut extends Command {
-    public CommandCrashOut() {
+public class CrashOut extends Command {
+    public CrashOut() {
         super("crashout", "No more ragebait.");
     }
 
