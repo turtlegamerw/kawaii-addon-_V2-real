@@ -23,7 +23,7 @@ public class KawaiiAddon extends MeteorAddon {
         LOG.info("Loading kawaii-addon-_V2-real...");
 
         // Modules
-        //Modules.get().add(new ChinaHat()); unfinished module and broken
+        Modules.get().add(new ChinaHat());
         Modules.get().add(new CatFacts());
         Modules.get().add(new HeadPatTurn());
         Modules.get().add(new Cape());
