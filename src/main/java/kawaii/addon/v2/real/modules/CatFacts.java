@@ -24,7 +24,7 @@ public class CatFacts extends Module {
     private int timer;
 
     public CatFacts() {
-        super(CATEGORY, "cat facts", "cat fact :3");
+        super(CATEGORY, "cat-facts", "cat fact :3");
     }
 
     @Override

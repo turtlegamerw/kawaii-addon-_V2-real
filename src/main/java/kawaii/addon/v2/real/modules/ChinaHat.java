@@ -37,7 +37,7 @@ public class ChinaHat extends Module {
     );
 
     public ChinaHat() {
-        super(KawaiiAddon.CATEGORY, "china hat", "Chinese hat.");
+        super(KawaiiAddon.CATEGORY, "china-hat", "Chinese hat.");
     }
 
     private static float toRadians(float deg) {
