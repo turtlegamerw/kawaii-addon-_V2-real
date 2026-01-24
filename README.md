@@ -27,6 +27,7 @@ A **Meteor Client addon** for Minecraft 1.21.8 & 1.21.11 that displays **catgirl
 - Displays **catgirl images** in your HUD
 - coordleaker command for lolz a.k.a cuddle command :)
 - player spinner
+- Map Censor 
 - crashout command to cool-down after getting killed
 - chinese hat (wip)
 
