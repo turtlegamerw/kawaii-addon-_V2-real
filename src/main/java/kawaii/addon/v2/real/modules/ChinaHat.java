@@ -37,7 +37,7 @@ public class ChinaHat extends Module {
     );
 
     public ChinaHat() {
-        super(KawaiiAddon.CATEGORY, "china hat", "Chinese hat.");
+        super(KawaiiAddon.CATEGORY, "china-hat", "Chinese hat.");
     }
 
     private static float toRadians(float deg) {
@@ -56,10 +56,11 @@ public class ChinaHat extends Module {
         double y = MathHelper.lerp(event.tickDelta, mc.player.lastRenderY, mc.player.getY());
         double z = MathHelper.lerp(event.tickDelta, mc.player.lastRenderZ, mc.player.getZ());
 
-        double playerHeight = mc.player.getHeight();
+        double renderY = MathHelper.lerp(event.tickDelta, mc.player.lastRenderY, mc.player.getY());
         double radius = size.get();
 
-        double baseHeight = y + playerHeight;
+        double eyeY = mc.player.getStandingEyeHeight();
+        double baseHeight = renderY + eyeY + 0.1;
         double tipHeight = baseHeight + (radius * 0.5);
 
         Color c = color.get();
