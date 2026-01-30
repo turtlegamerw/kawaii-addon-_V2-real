@@ -15,13 +15,14 @@ public class Troll extends Module {
     private final Setting<Boolean> fahhhOnDeath = sgGeneral.add(
         new BoolSetting.Builder()
             .name("fahhh-on-death")
-            .description("Plays a custom fahhh sound when you die.")
+            .description("Plays a custom sound when you die.")
             .defaultValue(true)
             .build()
     );
 
-    //private static final SoundEvent FAHHH_SOUND = new SoundEvent(new Identifier("assets/kawaiiaddon", "fahhh"));
-
+    // Use .of() instead of new
+    private static final Identifier FAHHH_ID = Identifier.of("kawaii-addon", "my_custom_event");
+    private static final SoundEvent FAHHH_SOUND = SoundEvent.of(FAHHH_ID);
 
     private boolean wasDead = false;
 
@@ -37,13 +38,9 @@ public class Troll extends Module {
 
         if (dead && !wasDead) {
             mc.getSoundManager().play(
-                PositionedSoundInstance.master(
-                    FAHHH_SOUND,
-                    1.0f // pitch
-                )
+                PositionedSoundInstance.master(FAHHH_SOUND, 1.0f)
             );
         }
-
         wasDead = dead;
     }
 }

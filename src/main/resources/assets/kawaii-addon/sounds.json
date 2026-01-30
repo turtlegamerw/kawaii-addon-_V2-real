@@ -1,7 +1,8 @@
 {
-  "fahh": {
+  "my_custom_event": {
+    "category": "player",
     "sounds": [
-      "fahh"
+      "kawaii-addon:fahhh"
     ]
   }
 }
