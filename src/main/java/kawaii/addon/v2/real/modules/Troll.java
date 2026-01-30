@@ -1,0 +1,49 @@
+package kawaii.addon.v2.real.modules;
+
+import kawaii.addon.v2.real.KawaiiAddon;
+import meteordevelopment.meteorclient.events.world.TickEvent;
+import meteordevelopment.meteorclient.settings.*;
+import meteordevelopment.meteorclient.systems.modules.Module;
+import meteordevelopment.orbit.EventHandler;
+import net.minecraft.client.sound.PositionedSoundInstance;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
+
+public class Troll extends Module {
+    private final SettingGroup sgGeneral = settings.getDefaultGroup();
+
+    private final Setting<Boolean> fahhhOnDeath = sgGeneral.add(
+        new BoolSetting.Builder()
+            .name("fahhh-on-death")
+            .description("Plays a custom fahhh sound when you die.")
+            .defaultValue(true)
+            .build()
+    );
+
+    //private static final SoundEvent FAHHH_SOUND = new SoundEvent(new Identifier("assets/kawaiiaddon", "fahhh"));
+
+
+    private boolean wasDead = false;
+
+    public Troll() {
+        super(KawaiiAddon.CATEGORY, "troll", "Changes some stuff. :)");
+    }
+
+    @EventHandler
+    private void onTick(TickEvent.Post event) {
+        if (mc.player == null || !fahhhOnDeath.get()) return;
+
+        boolean dead = mc.player.isDead();
+
+        if (dead && !wasDead) {
+            mc.getSoundManager().play(
+                PositionedSoundInstance.master(
+                    FAHHH_SOUND,
+                    1.0f // pitch
+                )
+            );
+        }
+
+        wasDead = dead;
+    }
+}
