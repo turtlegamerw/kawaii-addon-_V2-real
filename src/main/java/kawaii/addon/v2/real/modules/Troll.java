@@ -20,7 +20,26 @@ public class Troll extends Module {
             .build()
     );
 
-    // Use .of() instead of new
+    private final Setting<Double> pitch = sgGeneral.add(new DoubleSetting.Builder()
+        .name("pitch")
+        .description("set pitch.")
+        .defaultValue(1.0)
+        .min(0.5)
+        .sliderRange(0.5, 2.0)
+        .decimalPlaces(1)
+        .build()
+    );
+
+    private final Setting<Double> volume = sgGeneral.add(new DoubleSetting.Builder()
+        .name("volume")
+        .description("set volume.")
+        .defaultValue(0.5)
+        .min(0.1)
+        .sliderRange(0.1, 1.0)
+        .decimalPlaces(1)
+        .build()
+    );
+
     private static final Identifier FAHHH_ID = Identifier.of("kawaii-addon", "my_custom_event");
     private static final SoundEvent FAHHH_SOUND = SoundEvent.of(FAHHH_ID);
 
@@ -38,7 +57,7 @@ public class Troll extends Module {
 
         if (dead && !wasDead) {
             mc.getSoundManager().play(
-                PositionedSoundInstance.master(FAHHH_SOUND, 1.0f)
+                PositionedSoundInstance.master(FAHHH_SOUND, pitch.get().floatValue(), volume.get().floatValue())
             );
         }
         wasDead = dead;
