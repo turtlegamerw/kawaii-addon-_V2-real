@@ -1,8 +1,14 @@
 {
-  "my_custom_event": {
+  "fahhh_event": {
     "category": "player",
     "sounds": [
       "kawaii-addon:fahhh"
+    ]
+  },
+  "spinny_event": {
+    "category": "player",
+    "sounds": [
+      "kawaii-addon:spinny"
     ]
   }
 }

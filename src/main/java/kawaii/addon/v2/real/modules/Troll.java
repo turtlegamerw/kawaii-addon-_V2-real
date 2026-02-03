@@ -12,8 +12,7 @@ import net.minecraft.util.Identifier;
 public class Troll extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
-    private final Setting<Boolean> fahhhOnDeath = sgGeneral.add(
-        new BoolSetting.Builder()
+    private final Setting<Boolean> fahhhOnDeath = sgGeneral.add(new BoolSetting.Builder()
             .name("fahhh-on-death")
             .description("Plays a custom sound when you die.")
             .defaultValue(true)
@@ -40,7 +39,7 @@ public class Troll extends Module {
         .build()
     );
 
-    private static final Identifier FAHHH_ID = Identifier.of("kawaii-addon", "my_custom_event");
+    private static final Identifier FAHHH_ID = Identifier.of("kawaii-addon", "fahhh_event");
     private static final SoundEvent FAHHH_SOUND = SoundEvent.of(FAHHH_ID);
 
     private boolean wasDead = false;
