@@ -12,10 +12,11 @@ import net.minecraft.util.Identifier;
 public class Troll extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
-    private final Setting<Boolean> fahhhOnDeath = sgGeneral.add(new BoolSetting.Builder()
-            .name("fahhh-on-death")
-            .description("Plays a custom sound when you die.")
-            .defaultValue(true)
+    private final Setting<DeathSound> deathSound = sgGeneral.add(
+        new EnumSetting.Builder<DeathSound>()
+            .name("death-sound")
+            .description("funny sounds.")
+            .defaultValue(DeathSound.FAHHH)
             .build()
     );
 
@@ -39,8 +40,16 @@ public class Troll extends Module {
         .build()
     );
 
-    private static final Identifier FAHHH_ID = Identifier.of("kawaii-addon", "fahhh_event");
-    private static final SoundEvent FAHHH_SOUND = SoundEvent.of(FAHHH_ID);
+    public enum DeathSound {
+        FAHHH("kawaii-addon", "fahhh_event"),
+        VINEBOOM("kawaii-addon", "vine_boom_event"),
+        METAL_PIPE("kawaii-addon", "metal-pipe_drop_event"),;
+        public final SoundEvent sound;
+        DeathSound(String namespace, String path) {
+            Identifier id = Identifier.of(namespace, path);
+            this.sound = SoundEvent.of(id);
+        }
+    }
 
     private boolean wasDead = false;
 
@@ -50,13 +59,16 @@ public class Troll extends Module {
 
     @EventHandler
     private void onTick(TickEvent.Post event) {
-        if (mc.player == null || !fahhhOnDeath.get()) return;
-
+        assert mc.player != null;
         boolean dead = mc.player.isDead();
 
         if (dead && !wasDead) {
             mc.getSoundManager().play(
-                PositionedSoundInstance.master(FAHHH_SOUND, pitch.get().floatValue(), volume.get().floatValue())
+                PositionedSoundInstance.master(
+                    deathSound.get().sound,
+                    pitch.get().floatValue(),
+                    volume.get().floatValue()
+                )
             );
         }
         wasDead = dead;

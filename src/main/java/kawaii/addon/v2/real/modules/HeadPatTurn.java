@@ -34,19 +34,23 @@ public class HeadPatTurn extends Module {
         .build()
     );
 
-    private final Setting<Double> volume = sg.add(new DoubleSetting.Builder()
-        .name("volume")
-        .defaultValue(1.0)
-        .min(0.0)
-        .sliderRange(0.0, 1.0)
-        .build()
-    );
-
     private final Setting<Double> pitch = sg.add(new DoubleSetting.Builder()
         .name("pitch")
+        .description("set pitch.")
         .defaultValue(1.0)
         .min(0.5)
         .sliderRange(0.5, 2.0)
+        .decimalPlaces(1)
+        .build()
+    );
+
+    private final Setting<Double> volume = sg.add(new DoubleSetting.Builder()
+        .name("volume")
+        .description("set volume.")
+        .defaultValue(0.5)
+        .min(0.1)
+        .sliderRange(0.1, 1.0)
+        .decimalPlaces(1)
         .build()
     );
 
@@ -79,9 +83,8 @@ public class HeadPatTurn extends Module {
 
         spinSound = PositionedSoundInstance.master(
             SPINNY_SOUND,
-            //FIX volume and pitch one day???
-            volume.get().floatValue(),
-            pitch.get().floatValue()
+            pitch.get().floatValue(),
+            volume.get().floatValue()
         );
         mc.getSoundManager().play(spinSound);
     }

@@ -5,6 +5,18 @@
       "kawaii-addon:fahhh"
     ]
   },
+  "vine_boom_event": {
+    "category": "player",
+    "sounds": [
+      "kawaii-addon:vine-boom"
+    ]
+  },
+  "metal-pipe_drop_event": {
+    "category": "player",
+    "sounds": [
+      "kawaii-addon:metal-pipe-falling-sound"
+    ]
+  },
   "spinny_event": {
     "category": "player",
     "sounds": [
