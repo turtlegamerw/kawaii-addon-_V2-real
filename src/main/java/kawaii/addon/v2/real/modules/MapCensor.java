@@ -20,7 +20,7 @@ public class MapCensor extends Module {
     );
 
     public enum Mode {
-        Rem, rip, punkalopi, pileton, catgirl
+        Rem, rip, punkalopi, pileton, catgirl, smoke
     }
 
     public Identifier getTexture() {
@@ -30,6 +30,7 @@ public class MapCensor extends Module {
             case punkalopi -> Identifier.of("kawaii-addon", "censor/punkalopi.png");
             case rip -> Identifier.of("kawaii-addon", "censor/rip.png");
             case Rem -> Identifier.of("kawaii-addon", "censor/rem.png");
+            case smoke -> Identifier.of("kawaii-addon", "censor/smoke.png");
         };
     }
 }

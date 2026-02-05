@@ -5,7 +5,6 @@ import meteordevelopment.meteorclient.settings.EnumSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.meteorclient.utils.network.Capes;
 
 public class Cape extends Module {
 
@@ -23,6 +22,6 @@ public class Cape extends Module {
     private final SettingGroup sgCapes = settings.getDefaultGroup();
 
     public enum Capes{
-        cape1, cape2, cape3, cape4, hutao, vape
+        cape1, cape2, cape3, cape4, hutao, vape, RETRO
     }
 }
