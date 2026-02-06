@@ -21,7 +21,6 @@ public class KawaiiAddon extends MeteorAddon {
     @Override
     public void onInitialize() {
         LOG.info("Loading kawaii-addon-_V2-real...");
-        LOG.info("67");
 
         // Modules
         Modules.get().add(new ChinaHat());
