@@ -49,7 +49,7 @@ public class Cat extends HudElement {
     );
 
     public enum Picture {
-        Cat1, Cat2, Cat3, Cat4, Cat5, Cat6, Cat7, Cat8, Cat9
+        Cat1, Cat2, Cat3, Cat4, Cat5, Cat6, Cat7, Cat8, Cat9, Cat10, Cat11, Cat12, Cat13
     }
 
     private Identifier TEXTURE;
@@ -66,6 +66,11 @@ public class Cat extends HudElement {
                 case Cat7 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat7.png");
                 case Cat8 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat8.png");
                 case Cat9 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat9.png");
+                case Cat10 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat10.png");
+                case Cat11 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat11.png");
+                case Cat12 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat12.png");
+                case Cat13 -> TEXTURE = Identifier.of("kawaii-addon", "hud/cat13.png");
+
             }
         int x_width = width.get();
         int y_height = height.get();
