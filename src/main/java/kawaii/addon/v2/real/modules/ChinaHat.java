@@ -28,6 +28,22 @@ public class ChinaHat extends Module {
         .build()
     );
 
+    private final Setting<Boolean> rainbow = sgGeneral.add(new BoolSetting.Builder()
+        .name("rainbow")
+        .description("Cycle hat color.")
+        .defaultValue(false)
+        .build()
+    );
+
+    private final Setting<Double> rainbowSpeed = sgGeneral.add(new DoubleSetting.Builder()
+        .name("rainbow-speed")
+        .description("Speed of the rainbow cycle.")
+        .defaultValue(1.0)
+        .min(0.1).sliderRange(0.1, 5.0)
+        .visible(rainbow::get)
+        .build()
+    );
+
     private final Setting<Integer> points = sgGeneral.add(new IntSetting.Builder()
         .name("points")
         .description("How smooth the hat circle is.")
@@ -40,12 +56,9 @@ public class ChinaHat extends Module {
         super(KawaiiAddon.CATEGORY, "china-hat", "Chinese hat.");
     }
 
-    private static float toRadians(float deg) {
-        return (float) (deg * (Math.PI / 180.0));
-    }
-
-    private static double lerp(double t, double a, double b) {
-        return a + (b - a) * t;
+    private Color getRainbowColor() {
+        float hue = (float) ((System.currentTimeMillis() * rainbowSpeed.get()) % 10000L / 10000f);
+        return new Color().fromHsv(hue * 360, 1.0f, 1.0f);
     }
 
     @EventHandler
@@ -56,14 +69,11 @@ public class ChinaHat extends Module {
         double y = MathHelper.lerp(event.tickDelta, mc.player.lastRenderY, mc.player.getY());
         double z = MathHelper.lerp(event.tickDelta, mc.player.lastRenderZ, mc.player.getZ());
 
-        double renderY = MathHelper.lerp(event.tickDelta, mc.player.lastRenderY, mc.player.getY());
         double radius = size.get();
-
         double eyeY = mc.player.getStandingEyeHeight();
-        double baseHeight = renderY + eyeY + 0.1;
+        double baseHeight = y + eyeY + 0.1;
         double tipHeight = baseHeight + (radius * 0.5);
-
-        Color c = color.get();
+        Color c = rainbow.get() ? getRainbowColor() : (Color) color.get();
 
         for (int i = 0; i < points.get(); i++) {
             double a1 = (i / (double) points.get()) * Math.PI * 2;
