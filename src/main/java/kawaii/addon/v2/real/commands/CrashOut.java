@@ -20,7 +20,7 @@ public class CrashOut extends Command {
 }
 
 class BigRatString {
-    //you find the easter egg lol in the source code, congrats
+    //you found the Easter egg lol in the source code, congrats
     String d =  "⠀⠀⠀⠀⠀⠀⠀⠀          ⢀⣴⠖⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀           ";
     String d1 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡎⡇⠀⢘⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀            ";
     String d3 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡂⠘⠀⠚⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀            ";
