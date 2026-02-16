@@ -37,6 +37,7 @@ public class KawaiiAddon extends MeteorAddon {
 
         // HUD
         Hud.get().register(Cat.INFO);
+        Hud.get().register(WaterMark.INFO);
     }
 
     @Override
