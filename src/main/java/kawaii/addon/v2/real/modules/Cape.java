@@ -11,7 +11,7 @@ public class Cape extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
     public final Setting<Capes> capes = sgGeneral.add(new EnumSetting.Builder<Capes>()
         .name("Cape")
-        .defaultValue(Capes.cape1)
+        .defaultValue(Capes.kawaii)
         .build()
     );
 
@@ -22,6 +22,6 @@ public class Cape extends Module {
     private final SettingGroup sgCapes = settings.getDefaultGroup();
 
     public enum Capes{
-        cape1, cape2, cape3, cape4, hutao, vape, RETRO
+        kawaii, cat, idk, turtle, hutao, vape, RETRO, h0rny
     }
 }

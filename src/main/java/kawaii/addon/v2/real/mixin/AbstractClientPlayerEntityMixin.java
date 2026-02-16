@@ -30,13 +30,14 @@ public abstract class AbstractClientPlayerEntityMixin extends Entity {
         SkinTextures original = cir.getReturnValue();
         if (original == null) return;
         Identifier cape = switch (module.capes.get()) {
-            case cape1 -> Identifier.of("kawaii-addon", "cape/cape1.png");
-            case cape2 -> Identifier.of("kawaii-addon", "cape/cape2.png");
-            case cape3 -> Identifier.of("kawaii-addon", "cape/cape3.png");
-            case cape4 -> Identifier.of("kawaii-addon", "cape/cape4.png");
+            case kawaii -> Identifier.of("kawaii-addon", "cape/kawaii.png");
+            case cat -> Identifier.of("kawaii-addon", "cape/cat.png");
+            case idk -> Identifier.of("kawaii-addon", "cape/idk.png");
+            case turtle -> Identifier.of("kawaii-addon", "cape/turtle.png");
             case hutao -> Identifier.of("kawaii-addon", "cape/hutao.png");
             case vape -> Identifier.of("kawaii-addon", "cape/vape.png");
             case RETRO -> Identifier.of("kawaii-addon", "cape/retro.png");
+            case h0rny -> Identifier.of("kawaii-addon", "cape/h0rny.png");
             default -> original.capeTexture();
         };
         SkinTextures modified = new SkinTextures(
